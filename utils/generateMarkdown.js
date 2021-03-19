@@ -2,32 +2,41 @@
 // If there is no license, return an empty string
 const badges = {
     APACHE: `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]`,
-    IBM: '[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)]',
-    MIT: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)]',
-    Mozilla: '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]',
+    IBM: '![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)',
+    MIT: '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)',
+    Mozilla: '![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)',
   }
   
 function renderLicenseBadge(license) {
-  if (license = )
-
-  // (https://opensource.org/licenses/Apache-2.0),
-  // (https://opensource.org/licenses/IPL-1.0)
-  // (https://opensource.org/licenses/MIT)
-  // (https://opensource.org/licenses/MPL-2.0)
- 
-  return badges(license);
+  let badgesString = ""
+  for (let index = 0; index < license.length; index++) {
+    const element = license[index];
+    badgesString += badges[element] + "\n";
+  }
+  return badgesString;
   
 };
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if((renderLicenseBadge is =))
+
+//  if () {
+//    renderLicenseBadge();
+//  }
+//  else (license === "") {
+//   return;
+// } 
 };
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+    // (https://opensource.org/licenses/Apache-2.0),
+  // (https://opensource.org/licenses/IPL-1.0)
+  // (https://opensource.org/licenses/MIT)
+  // (https://opensource.org/licenses/MPL-2.0)
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -66,7 +75,7 @@ ${data.install}
 \`\`\`
 ​## License
 
-${renderLicenseSection(license)}
+{renderLicenseSection(license)}
 
 ## Contributing 
 
@@ -88,4 +97,9 @@ If you have any questions about the repo, open an issue or contact me directly a
 `};
 
 
-module.exports = generateMarkdown;
+module.exports = {
+  generateMarkdown,
+  badges,
+
+
+};
