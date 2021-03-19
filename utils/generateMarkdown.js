@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 
 const badges = {
-  "APACHE": `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]`,
+  "APACHE": `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`,
   "IBM": '![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)',
   "MIT": '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)',
   "Mozilla": '![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)'
@@ -42,10 +42,10 @@ function generateMarkdown(data) {
 
 ${renderLicenseBadge(data.license)}
 
-
 ## Description 
 
 ${data.description}
+
 
 ## Table of Contents 
 * [Installation](#installation)
@@ -54,41 +54,53 @@ ${data.description}
 ​
 * [License](#license)
 ​
-* [Contributing](#contributing)
+* [Contributions](#contributions)
 ​
 * [Tests](#tests)
 ​
 * [Questions](#questions)
 
+<br>
+
 ## License 
 
 This project uses the ${data.license} license.
 
+<br>
+
 ## <a name="installation"></a> Installation
 
 To install necessary dependencies, run the following command:
-​
+
 \`\`\`
-${data.install}
+${data.installation}
 \`\`\`
 
-​## <a name="license"></a> License 
+<br>
+
+## <a name="license"></a>License
 
 ${renderLicenseLink(data.license)}
 
-## Contributing 
+<br>
+
+## <a name="contributions"></a>Contributions
 
 ${data.contributions}
 
-## Tests
+<br>
+
+## <a name="tests"></a>Tests
 
 To run tests, run the following command:
 
 \`\`\`
-${data.test}
+${data.tests}
 \`\`\`
 
-## Questions
+<br>
+
+## <a name="questions"></a>Questions
 
 If you have any questions about the repo, open an issue or contact me directly at ${data.email} You can find more of my work at ${data.username}.
 

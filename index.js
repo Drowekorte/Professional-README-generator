@@ -7,26 +7,26 @@ const generateMarkdown = require("./utils/generateMarkdown.js");
 
 // TODO: Create an array of questions for user input
 const questions = [
-    // {
-    //     type: 'input',
-    //     message: 'What is the title of your project?',
-    //     name: 'title'
-    // },
-    // {
-    //     type: 'input',
-    //     message: 'Describe your project:',
-    //     name: "description"
-    // },
-    // {
-    //     type: 'input',
-    //     message: 'Installation',
-    //     name: 'installation'
-    // },
-    // {
-    //     type: 'input',
-    //     message: 'Usage',
-    //     name: 'usage'
-    // },
+    {
+        type: 'input',
+        message: 'What is the title of your project?',
+        name: 'title'
+    },
+    {
+        type: 'input',
+        message: 'Describe your project:',
+        name: "description"
+    },
+    {
+        type: 'input',
+        message: 'Installation',
+        name: 'installation'
+    },
+    {
+        type: 'input',
+        message: 'Usage',
+        name: 'usage'
+    },
     {
         type: 'list',
         message: 'License,',
@@ -34,26 +34,26 @@ const questions = [
         choices: ["APACHE", "IBM", "MIT", "Mozilla"]
     },
 
-    // {
-    //     type: 'input',
-    //     message: 'Contributions',
-    //     name: 'contributions'
-    // },
-    // {
-    //     type: 'input',
-    //     message: 'Tests',
-    //     name: 'tests'
-    // },
-    // {
-    //     type: 'input',
-    //     message: 'What is your email address?',
-    //     name: 'email'
-    // },
-    // {
-    //     type: 'input',
-    //     message: 'What is your GitHub username?',
-    //     name: 'username'
-    // },
+    {
+        type: 'input',
+        message: 'Contributions',
+        name: 'contributions'
+    },
+    {
+        type: 'input',
+        message: 'Tests',
+        name: 'tests'
+    },
+    {
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'email'
+    },
+    {
+        type: 'input',
+        message: 'What is your GitHub username?',
+        name: 'username'
+    },
     
 ]
 // TODO: Create a function to write README file
@@ -68,7 +68,7 @@ function writeToFile (fileName, data){
 function init() {
     inquirer.prompt(questions)
     .then(function (data) {
-        writeToFile("README3.md", data)
+        writeToFile("README.md", data)
     })
     // generateMarkdown();
 
