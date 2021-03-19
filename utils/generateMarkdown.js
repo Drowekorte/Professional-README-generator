@@ -1,41 +1,38 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+
 const badges = {
-    APACHE: `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]`,
-    IBM: '![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)',
-    MIT: '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)',
-    Mozilla: '![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)',
-  }
-  
+  "APACHE": `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]`,
+  "IBM": '![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)',
+  "MIT": '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)',
+  "Mozilla": '![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)'
+}
+
 function renderLicenseBadge(license) {
-  let badgesString = ""
-  for (let index = 0; index < license.length; index++) {
-    const element = license[index];
-    badgesString += badges[element] + "\n";
-  }
-  return badgesString;
-  
+
+  return badges[license];
+
 };
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
+const links = {
+  "APACHE": `https://opensource.org/licenses/Apache-2.0`,
+  "IBM": `https://opensource.org/licenses/IPL-1.0`,
+  "MIT": `https://opensource.org/licenses/MIT`,
+  "Mozilla": `https://opensource.org/licenses/MPL-2.0`
+
+}
+
 function renderLicenseLink(license) {
 
-//  if () {
-//    renderLicenseBadge();
-//  }
-//  else (license === "") {
-//   return;
-// } 
+  return links[license];
+
 };
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-    // (https://opensource.org/licenses/Apache-2.0),
-  // (https://opensource.org/licenses/IPL-1.0)
-  // (https://opensource.org/licenses/MIT)
-  // (https://opensource.org/licenses/MPL-2.0)
 }
 
 // TODO: Create a function to generate markdown for README
@@ -51,7 +48,6 @@ ${renderLicenseBadge(data.license)}
 ${data.description}
 
 ## Table of Contents 
-​
 * [Installation](#installation)
 ​
 * [Usage](#usage)
@@ -66,20 +62,23 @@ ${data.description}
 
 ## License 
 
-## Installation
+This project uses the ${data.license} license.
+
+## <a name="installation"></a> Installation
 
 To install necessary dependencies, run the following command:
 ​
-\`\`\
+\`\`\`
 ${data.install}
 \`\`\`
-​## License
 
-{renderLicenseSection(license)}
+​## <a name="license"></a> License 
+
+${renderLicenseLink(data.license)}
 
 ## Contributing 
 
-${data.contributing}
+${data.contributions}
 
 ## Tests
 
@@ -91,15 +90,12 @@ ${data.test}
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at tbeauchamp@2u.com. You can find more of my work at [tuckerbeauchamp](https://github.com/tuckerbeauchamp/).
+If you have any questions about the repo, open an issue or contact me directly at ${data.email} You can find more of my work at ${data.username}.
 
 
 `};
 
 
-module.exports = {
-  generateMarkdown,
-  badges,
+module.exports = generateMarkdown
 
 
-};

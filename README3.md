@@ -1,15 +1,14 @@
 
-# kasjfh
+# undefined
 
-
+![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)
 
 
 ## Description 
 
-;alsdkfj
+undefined
 
 ## Table of Contents 
-​
 * [Installation](#installation)
 ​
 * [Usage](#usage)
@@ -24,15 +23,19 @@
 
 ## License 
 
+This project uses the Mozilla license.
+
 ## Installation
 
 To install necessary dependencies, run the following command:
 ​
-``undefined
 ```
-​## License
+undefined
+```
 
-{renderLicenseSection(license)}
+​## <a name="license"></a> License 
+
+(https://opensource.org/licenses/MPL-2.0)
 
 ## Contributing 
 
@@ -48,6 +51,6 @@ undefined
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at tbeauchamp@2u.com. You can find more of my work at [tuckerbeauchamp](https://github.com/tuckerbeauchamp/).
+If you have any questions about the repo, open an issue or contact me directly at undefined You can find more of my work at undefined.
 
 

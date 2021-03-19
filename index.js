@@ -1,27 +1,22 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const {generateMarkdown, badges} = require("./utils/generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 
 
 // TODO: Create an array of questions for user input
 const questions = [
-    {
-        type: 'input',
-        message: 'What is the title of your project?',
-        name: 'title'
-    },
-    {
-        type: 'input',
-        message: 'Describe your project:',
-        name: "description"
-    },
-    {
-        type: 'input',
-        message: 'Add a Table of Contents',
-        name: "table"
-    },
+    // {
+    //     type: 'input',
+    //     message: 'What is the title of your project?',
+    //     name: 'title'
+    // },
+    // {
+    //     type: 'input',
+    //     message: 'Describe your project:',
+    //     name: "description"
+    // },
     // {
     //     type: 'input',
     //     message: 'Installation',
@@ -32,55 +27,13 @@ const questions = [
     //     message: 'Usage',
     //     name: 'usage'
     // },
-    // {
-    //     type: 'list',
-    //     message: 'License,',
-    //     name: 'license',
-    //     choices: ["APACHE", "IBM", "MIT", "Mozilla"]
-    // },
     {
         type: 'list',
+        message: 'License,',
         name: 'license',
-        message: 'Please select the appropriate license.',
-        choices: [
-            { 
-                name: 'APACHE',
-                value: {
-                    name: 'APACHE',
-                    link: 'APACHE',
-                    url: 'https://opensource.org/licenses/Apache-2.0',
-                    color: 'blue',
-                },
-            },
-            { 
-                name: 'IBM',
-                value: {
-                    name: 'IBM',
-                    link: 'IBM',
-                    url: 'https://img.shields.io/badge/License-IPL%201.0-blue.svg',
-                    color: 'blue',
-                },
-            },
-            { 
-                name: 'MIT',
-                value: {
-                    name: 'MIT',
-                    link: 'MIT',
-                    url: 'https://img.shields.io/badge/License-MIT-yellow.svg',
-                    color: 'yellow',
-                },
-            },
-            { 
-                name: 'Mozilla',
-                value: {
-                    name: 'Mozilla',
-                    link: 'Mozilla',
-                    url: 'https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg',
-                    color: 'green',
-                },
-            },
-        ] 
+        choices: ["APACHE", "IBM", "MIT", "Mozilla"]
     },
+
     // {
     //     type: 'input',
     //     message: 'Contributions',
